@@ -1,6 +1,8 @@
 import sys, os
-sys.path.apend(os.pardir)
-import numpy as np 
+sys.path.append(os.pardir)
+print(sys.path)
+
+import numpy as np
 from dataset.mnist import load_mnist
 from PIL import Image
 
