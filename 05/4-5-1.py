@@ -4,6 +4,7 @@ from common.functions import *
 from common.gradient import numerical_gradient
 
 class TwoLayerNet:
+
 	def __init__(self, input_size, hidden_size, output_size,weight_init_std=0.01):
 		self.params = {}
 		self.params['W1'] = weight_init_std * \
@@ -47,3 +48,6 @@ class TwoLayerNet:
 		grads['b2'] = numerical_gradient(loss_W, self.params['b2'])
 
 		return grads
+
+net = TwoLayerNet(input_size=784,hidden_size=100,output_size=10)
+print(net.params['W1'].shape,net.params['b1'].shape,net.params['W2'].shape,net.params['b2'].shape)
